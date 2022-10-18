@@ -10,6 +10,7 @@ function App() {
   
   return (
     <div>
+      
     <WeatherApp/>
     <ClockApp/>
     </div>
