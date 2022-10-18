@@ -1,13 +1,231 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'montserrat', sans-serif;
+}
+
+.app{
+  background-image: url('./assets/fondo2.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+}
+
+.app.pink{
+  background-image: url('./assets/fondo1.jpg')
+}
+
+.clockApp{
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.clock{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(45deg,#051817,#09c7ce);
+  height: 180px;
+  width:350px;
+  color:#06f1f6;
+  text-shadow: 1px 1px 7px;
+  border-radius: 20px;
+  border: 2px solid silver;
+  box-shadow: 0 0 5px 15px;
+
+}
+
+.clockdir{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.clock section{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.clock section p{
+  font-size: 4rem;
+}
+
+.clock section small{
+  color: silver;
+  text-shadow: none;
+}
+
+.setdate{
+  margin-bottom: 20px;
+}
+
+main{
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom,
+                                     rgba(0,0,0,0),
+                                     rgba(0,0,0,0.6));
+  padding: 30px 75px 75px 75px;
+}
+
+.buscador-box{
+  width: 100%;
+  margin:0 0 75px 0;
+}
+
+.buscador-box .buscador{
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0px 0px 10px 10px;
+  margin-top: -25px;
+
+  box-shadow: 0px 5px rgba(0,0,0,0.2);
+
+  font-size: 20px;
+  color: #313131;
+
+  transition: 0.4s ease;
+}
+
+.buscador-box .buscador:focus{
+  background-color: rgba(255,255,255,0.5)
+}
+
+.info-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.local-box{
+  margin-bottom: 30px;
+}
+
+.local-box .local{
+  color: rgba(255,255,255,0.7);
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(255, 255, 255, 0.1)
+}
+
+.local-box .date{
+  color: rgba(255,255,255,0.7);
+  font-size: 25px;
+  font-weight: 200;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 3px 3px rgba(255, 255, 255, 0.1)
+}
+
+.tiempo-box{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  text-align: center;
+  width: 500px;
+}
+
+.tiempo-box .temp{
+  width: 220px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 18px;
+
+  color: #FFF;
+  font-size: 75px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50,50,70,0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0,0,0,0.2);
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.tiempo-box .temp_max{
+  position: relative;
+  display: inline-block;
+  margin: 15px auto;
+  background-color: rgba(197, 90, 90, 0.5);
+  border-radius: 18px;
+
+  padding: 15px 25px;
+
+  color: rgb(206, 199, 199);
+  font-size: 30px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50,50,70,0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0,0,0,0.2);
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.tiempo-box .temp_min{
+  position: relative;
+  display: inline-block;
+  margin: 15px auto;
+  background-color: rgba(115, 123, 233, 0.5);
+  border-radius: 18px;
+
+  padding: 15px 25px;
+
+  color: rgb(206, 199, 199);
+  font-size: 30px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50,50,70,0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0,0,0,0.2);
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.tiempo-box .tiempo {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 3px 6px rgba(255, 255, 255, 0.1);
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
