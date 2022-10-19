@@ -1,3 +1,9 @@
+This is my portfolio application, it´s a recopilatory of simple apps and my CV to take a see of what im able to do.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
